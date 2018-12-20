@@ -12,8 +12,8 @@ public class UserController {
     @Autowired
     UserMapper userMapper;
 
-    @RequestMapping(value = "cs")
-    public User cs() {
+    @RequestMapping(value = "selectUserByName")
+    public User selectUserByName() {
         //调用dao层
         User user = userMapper.selectUserByName("beyondLi");
         return user;
