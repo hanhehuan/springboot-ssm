@@ -59,13 +59,6 @@ public class MD5Encrypt {
     }
     return resultString;
   }
-  /**
-   * 
-   * @param args
-   */
-  public static void main(String[] args) {
-//    MD5Encrypt md5encrypt = new MD5Encrypt();
-    System.out.println(MD5Encode("123456"));
-  }
+ 
 }
 

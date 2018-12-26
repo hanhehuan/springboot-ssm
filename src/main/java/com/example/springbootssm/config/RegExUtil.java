@@ -57,7 +57,7 @@ public class RegExUtil {
 
   /**
    * ��Ҫ����ģ����ģ���Ƿ������� �Ѳ��ҵ���Ԫ�ؼӵ�vector��
-   * @param patternΪ������ʽģʽ
+   * @param
    * @param str ԭʼ�ִ�
    * @return vector
    * @since  1.0
@@ -81,7 +81,7 @@ public class RegExUtil {
   /**
    * ģ���Ƿ�������
    * ������Ҫ�ǰѲ��ҵ���Ԫ�ؼӵ�vector��
-   * @param patternΪ������ʽģʽ
+   * @param
    * @param str ԭʼ�ִ�
    * @since  1.0
    */
@@ -107,7 +107,7 @@ public class RegExUtil {
 
   /**
    * ƥ�����з���ģʽҪ����ִ����ӵ�ʸ��vector������
-   * @param patternΪ������ʽģʽ
+   * @param
    * @param str ԭʼ�ִ�
    * @return vector
    * @since  1.0
@@ -133,7 +133,7 @@ public class RegExUtil {
 
   /**
    * ƥ�����з���ģʽҪ����ִ����ӵ��ַ���������
-   * @param patternΪ������ʽģʽ
+   * @param
    * @param str ԭʼ�ִ�
    * @return array
    * @since  1.0
@@ -160,8 +160,8 @@ public class RegExUtil {
   }
   /**
    * ת��������ʽ�ַ�(֮������Ҫ��\��$�ַ���escapeDollarBackslash�����ķ�ʽ����Ϊ��repalceAll�ǲ��еģ��򵥵�����"$".repalceAll("\\$","\\\\$")��ᷢ��������ûᵼ������Խ�����)
-   * @param patternΪ������ʽģʽ
-   * @param str ԭʼ�ִ�
+   * @param
+   * @param
    * @return array
    * @since  1.0
    */
@@ -181,7 +181,7 @@ public class RegExUtil {
     /**
      * ��ȡָ���ִ��ĺ���
      * ������Ҫ�ǰѲ��ҵ���Ԫ��
-     * @param patternΪ������ʽģʽ
+     * @param
      * @param str ԭʼ�ִ�
      * @since  1.0
      */
