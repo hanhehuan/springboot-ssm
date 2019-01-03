@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="../static/layui/css/layui.css" />
+    <style>
+        .sry{
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 200px;
+            top: 200px;
+
+        }
+        .bt{
+            border: solid yellow;
+            text-align: center;
+            font-size: 20px;
+            background: red;
+            z-index: 9988;
+        }
+        .zh{
+            border: solid yellow;
+            text-align: center;
+            font-size: 20px;
+            /*background: red;*/
+            z-index: 9988;
+        }
+        .mm{
+            border: solid yellow;
+            text-align: center;
+            font-size: 20px;
+            /*background: red;*/
+            z-index: 9988;
+        }
+        .tijiao{
+            border: solid yellow;
+            text-align: center;
+            /*background: red;*/
+            z-index: 9988;
+        }
+    </style>
+</head>
+<body class="layui-layout-body" background="img/meinvhuns.JPEG">
+<form class="layui-form">
+    <div class="sry">
+        <div class="bt"><h1>学生选课管理系统</h1></div>
+        <div class="zh">
+            <label for="zhanghao"  class="layui-form-label">账户：</label>
+            <div class="layui-input-inline">
+                <input id="zhanghao" name="username" type="text" value="" placeholder="请输入账户！" lay-verify="required" required class="layui-input"/>
+            </div>
+        </div>
+        <div class="mm">
+            <label for="mimma" class="layui-form-label">密码：</label>
+            <div class="layui-input-inline">
+                <input id="mimma" name="password" type="password" value="" placeholder="请输入密码！" lay-verify="required" required class="layui-input"/>
+            </div>
+        </div>
+        <div class="tijiao">
+            <button class="layui-btn layui-btn-radius"lay-submit lay-filter="formtijiao" >提交</button>
+        </div>
+    </div>
+</form>
+<script src="../static/layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use(['element','form','jquery'], function(){
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.$;
+        form.on('submit(formtijiao)',function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+        var username = $('#zhanghao').val();
+        var password = $('#mimma').val();
+        $.ajax({
+            url:""
+            ,type:'post'
+            ,dataType:'json'
+            ,data:{
+                username:username,
+                password:password
+            },
+            success:function(data){
+                if(data.code == '00'){
+
+                }
+            },
+            error:function(data){
+
+            }
+        });
+
+
+    });
+</script>
+</body>
+</html>
