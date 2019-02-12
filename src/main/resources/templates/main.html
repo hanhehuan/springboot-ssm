@@ -46,7 +46,7 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">所有商品</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd lay-id="111"><a href="javascript:;" data-options="{url:'www.baidu.com',title:'百度'}">列表一</a></dd>
                         <dd><a href="javascript:;">列表二</a></dd>
                         <dd><a href="javascript:;">列表三</a></dd>
                         <dd><a href="">超链接</a></dd>
@@ -101,9 +101,22 @@
         var layer = layui.layer;
         var tree = layui.tree;
         var $ = layui.$;
-        element.on('nav(test)',function(elem){
-            layer.msg(elem);
-        });
+        //element.on('nav(test)',function(elem){
+         //   layer.msg(elem);
+        //});
+        /*使用下面的方式需要引用jquery*/
+        $('.layui-nav-child a').click(function () {
+             var options = eval('('+$(this).data('options')+')');
+             var url = options.url;
+             var title = options.title;
+             element.tabAdd('tabs',{
+                 title : title,
+                 content : '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>',
+                 id:'111'
+
+             });
+         });
+
         //获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
         var layid = location.hash.replace(/^#test1=/, '');
         element.tabChange('test1', layid); //假设当前地址为：http://a.com#test1=222，那么选项卡会自动切换到“发送消息”这一项

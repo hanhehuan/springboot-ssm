@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <title>111</title>
+<body>
+<div style="margin: 0;width: 100%;">
+    <div style="width: 100%;height: 100px;">
+        <!--头部-->
+    </div>
+    <div style="margin: 0;width: 15%;height: 600px;background-color:#01AAED;float: left;">
+        <!--左侧-->
+        <ul class="layui-nav layui-nav-tree">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">111</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">1111</a></dd>
+                    <dd><a href="javascript:;">1112</a></dd>
+                    <dd><a href="javascript:;">1113</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">222</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">2221</a></dd>
+                    <dd><a href="javascript:;">2222</a></dd>
+                    <dd><a href="javascript:;">2223</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div style="margin: 0;width: 85%;height: 600px;background-color:#2D93CA;float: left;">
+        <div class="layui-tab"lay-allowClose="true"lay-filter="demo">
+            <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="1">111</li>
+                <li lay-id="2">222</li>
+                <li lay-id="3">333</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">11111111111111</div>
+                <div class="layui-tab-item">22222222222</div>
+                <div class="layui-tab-item">333333333</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="layui/layui2.4.5/layui.js"></script>
+<script>
+    layui.use('element',function(){
+        var element=layui.element;
+        element.on('tab(demo)',function(data){
+            console.log(data.index);
+            location.hash='demo='+this.getAttribute('lay-id');
+        })
+
+    });
+</script>
+
+
+</body>
+
+</html>
